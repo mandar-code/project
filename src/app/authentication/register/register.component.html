@@ -1,0 +1,62 @@
+
+
+<div>
+  <div class="style">
+      <div class="main-div">
+      <div class="login-wrapper"   >
+        <mat-card class="box" >
+          <img src="/assets/images/logo2.png" fxLayoutAlign="center center" class="img">
+      <mat-divider></mat-divider><br>
+        <div class="login">
+        <mat-card-header>
+        <mat-card-title>REGISTER</mat-card-title>
+        </mat-card-header>
+      </div>
+
+        <mat-card-content layout="row flex">
+          <form #form="ngForm" [formGroup]="myForm">
+
+              <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label>Email Id</mat-label>
+                <input matInput placeholder="Email" " formControlName="email" required>
+              </mat-form-field>
+
+              <mat-form-field field class="example-full-width" color="accent" appearance="outline"><mat-label>Mobile No</mat-label>
+                  <input matInput placeholder="Mobile" type="tel" (keypress)="numberOnly($event)"
+                   formControlName="mobile" required minlength="10" maxlength="10">
+                </mat-form-field>
+
+              <mat-form-field field class="example-full-width" color="accent" appearance="outline"><mat-label>User Id</mat-label>
+                <input matInput placeholder="User id" formControlName="userid" required>
+                <mat-hint>Please do not enter email id or mobile number as userid</mat-hint>
+              </mat-form-field>
+
+                <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label>Password</mat-label>
+                    <input matInput placeholder="New password"   formControlName="password" required [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+
+                    <mat-hint>Please do not enter email id or mobile number as password</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="Confirm password" formControlName="confirmPassword" [errorStateMatcher]="matcher">
+                      <mat-error *ngIf="myForm.hasError('notSame')">
+                        Passwords do not match
+                    </mat-error>
+                    <mat-hint>Please do not enter email id or mobile number as password</mat-hint>
+                </mat-form-field><br/>
+
+            </form>
+
+        </mat-card-content>
+        <mat-card-actions align="center">
+          <button mat-raised-button  color="accent" (click)="registerUser()" [disabled]="!form.valid">REGISTER</button>
+          <button mat-stroked-button color="accent" routerLink="/login">Cancel</button>
+
+        </mat-card-actions>
+
+
+        </mat-card>
+        </div>
+      </div>
+  </div>

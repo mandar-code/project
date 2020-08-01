@@ -1,0 +1,44 @@
+<div class="style">
+
+  <div class="main-div">
+
+      <div class="login-wrapper">
+<mat-card class="box">
+  <img src="/assets/images/logo2.png" fxLayoutAlign="center center" class="img">
+  <br>
+  <mat-divider></mat-divider>
+  <mat-card-header>
+      <mat-card-title>
+          <mat-icon>school</mat-icon><br>Student Login
+      </mat-card-title>
+  </mat-card-header><mat-divider></mat-divider>
+      <br>
+  <mat-card-content layout="row flex">
+      <form class="example-form" #myform="ngForm" [formGroup]="form">
+      <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label>User ID</mat-label>
+          <input matInput placeholder="User ID" name="userid"  required formControlName="userid">
+        </mat-form-field>
+
+        <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label>Password</mat-label>
+          <input matInput placeholder="Password" formControlName="password" required [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+      </mat-form-field>
+
+      <div >
+      <a class="reg" routerLink="/register"  routerLinkActive=router-link-active>Register</a>
+      <a class="for" routerLink="/forgotpassword" routerLinkActive=router-link-active>Forgot Password</a>
+      </div>
+
+</form>
+</mat-card-content>
+<mat-card-actions>
+<button mat-raised-button class="btn-block" color="accent" [disabled]="!myform.valid">LOG IN</button>
+</mat-card-actions>
+</mat-card>
+</div>
+</div>
+</div>
+
+
+

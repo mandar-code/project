@@ -1,0 +1,55 @@
+.drop-zone{
+ margin-left: 50px;
+ margin-top: 25px;
+  border: 3px dashed grey;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 350px;
+  height: 200px;
+ 
+  @media screen and (max-width: 599px);
+    max-width: 200px;
+    max-height: 200px;
+  @media screen and (min-width: 600px);
+    max-width: 260px;
+    max-height: 260px;
+  @media screen and (min-width: 990px);
+    max-width: 320px;
+    max-height: 320px;
+  @media screen and (min-width: 1200px);
+    max-width: 480px;
+    
+}
+
+
+.img-space {
+  border: dashed 1px #d3d3d3;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  height: 100px;
+  width: 100%;
+
+  }
+  
+  .img-space img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  }
+  
+  .fileInputProfileWrap {
+  
+  width:100px;
+  height: 50px;
+  margin-left: 200px;
+  margin-top: 0;
+  
+  
+ 
+  
+  }
+ input{
+   margin-left: 0;
+ }
+  
+ 

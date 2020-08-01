@@ -1,0 +1,62 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar> <div class="img">   <img src="/assets/images/logo2.png"></div></mat-toolbar><br><br>
+    <mat-divider></mat-divider>
+    <div layout=row flex >
+      <mat-icon  fontSet="material-icons-outlined" class="icon"> chrome_reader_mode </mat-icon> 
+      <a routerLink="admissionform" routerLinkActive=router-link-active><b>Admission Form</b></a> 
+      <mat-divider></mat-divider>
+      
+      <mat-icon fontSet="material-icons-outlined" class="icon"> money </mat-icon> 
+      <a routerLink="pendingfees" routerLinkActive=router-link-active  ><b>Pending Fees</b></a> 
+      <mat-divider></mat-divider>
+      
+      <mat-icon fontSet="material-icons-outlined" class="icon">assignment_turned_in</mat-icon>
+      <a routerLink="submittedforms" routerLinkActive=router-link-active><b>Submitted Forms</b></a>
+      <mat-divider></mat-divider>
+      
+      <mat-icon fontSet="material-icons-outlined" class="icon">account_balance_wallet</mat-icon>
+      <a routerLink="feespaid" routerLinkActive=router-link-active><b>Paid Fees</b></a> 
+      <mat-divider></mat-divider>
+      
+      <mat-icon  fontSet="material-icons-outlined" class="icon">payment</mat-icon>
+      <a routerLink="paymentsummary" routerLinkActive=router-link-active><b>Payment Summary</b></a>
+      
+      
+      <mat-divider></mat-divider>
+      </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="tool" >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+          <div class="img2">
+          <img src="/assets/images/logo3.png"></div>
+          <span class="spacer"></span>
+                 <button mat-icon-button >
+                     <mat-icon>power_settings_new</mat-icon>
+                  </button>
+    
+    </mat-toolbar>
+    <router-outlet> </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+

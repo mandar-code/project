@@ -1,0 +1,36 @@
+<div class="style">
+
+  <div class="main-div">
+
+      <div class="login-wrapper">
+<mat-card class="box">
+  <img src="/assets/images/logo2.png" fxLayoutAlign="center center" class="img">
+  <br>
+  <mat-divider></mat-divider>
+  <mat-card-header>
+      <mat-card-title>
+          <mat-icon>lock</mat-icon><br>Recover Password
+      </mat-card-title>
+  </mat-card-header><mat-divider></mat-divider>
+      <br>
+  <mat-card-content layout="row flex">
+      <form class="example-form" #forgotpasswordForm="ngForm" [formGroup]="form">
+      <mat-form-field field class="example-full-width" color="accent" appearance="outline" ><mat-label> Email</mat-label>
+          <input matInput placeholder="Registered Email" formControlName="email"  required>
+        </mat-form-field>
+      </form>
+
+  </mat-card-content>
+  <mat-card-actions align="center">
+      <button mat-raised-button  [disabled]="!forgotpasswordForm.valid" color="accent">SEND EMAIL</button>
+      <button mat-button color="accent" class="button" routerLink="/login">Cancel</button>
+
+  </mat-card-actions>
+
+</mat-card>
+</div>
+</div>
+</div>
+
+
+

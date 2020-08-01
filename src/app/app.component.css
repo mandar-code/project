@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.sidenav-container {height: 100%;}
+
+.sidenav {width: 250px;background: ghostwhite;}
+  
+.sidenav .mat-toolbar {background:ghostwhite;height: 80px;}
+
+.tool{background-color: white;z-index: 2;}
+
+img{margin-left: 20px;margin-top: 10px;width: 80%;}
+
+.router-link-active {color: blue;}
+
+a{color: gray;display: inline-block;margin-bottom: 13px;margin-left: 10px; font-family: 'Roboto', sans-serif;text-decoration: none !important;}
+
+.mat-icon{color: blue;margin-left: 15px;margin-right: 15px;display: inline-flex;vertical-align: middle;align-items: center;}
+
+.img2{width: 3%;}
+.spacer {
+  flex: 1 1 auto;
+}
+
+  
